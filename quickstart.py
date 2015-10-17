@@ -7,8 +7,8 @@ import getpass
 
 # Open chrome and navigate to site
 #driver = webdriver.Ie()
-driver = webdriver.Chrome()
-#driver = webdriver.PhantomJS()
+#driver = webdriver.Chrome()
+driver = webdriver.PhantomJS()
 driver.get("https://www.microsoft.com/Licensing/servicecenter/default.aspx")
 
 # Click sign in and then sign-in on live.com
@@ -64,6 +64,7 @@ else:
 
 WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "Step1Next"))).click()
 
+WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "usrFirstName")))
 firstname = driver.find_element_by_id("usrFirstName")
 lastname = driver.find_element_by_id("usrLastName")
 email = driver.find_element_by_id("usrEmailAddress")
