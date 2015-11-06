@@ -74,11 +74,8 @@ reference1 = driver.find_element_by_id("usrReference1")
 reference2 = driver.find_element_by_id("usrReference2")
 
 
-
-
-
-
 #driver.find_element_by_id("Step1Next").click()
 #driver.find_element_by_xpath("//*[@id='tblAgrmntSrchRst']/tbody/tr/td[1]/a").click()
 #driver.find_element_by_xpath("//*[@id='tabmenu']/li[2]/a").click()
+
 

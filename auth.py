@@ -11,10 +11,15 @@ ld = ldap.initialize(dc)
 
 ld.set_option(ldap.OPT_REFERRALS,0)
 
-user = raw_input("Enter your email: ")
-pw = gpw()
+user = 'osi\svc-msdeployuser'
+pw = 'TimeForCodeN0w'
 
 ld.simple_bind_s(user, pw)
 
 results = ld.search_s(base, scope, filters, attr)
+
+'''
+def (dc, base, 
+
+'''
 
