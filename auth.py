@@ -1,5 +1,6 @@
 import ldap
 from getpass import getpass as gpw
+from config import *
 
 dc = 'ldap://192.168.10.19'
 base = 'OU=Employees,OU=Users,OU=OSI Inc,DC=osisoft,DC=int'
@@ -10,9 +11,6 @@ attr = ['givenName', 'sn', 'mail', 'l', 'c', 'department']
 ld = ldap.initialize(dc)
 
 ld.set_option(ldap.OPT_REFERRALS,0)
-
-user = 'osi\svc-msdeployuser'
-pw = 'TimeForCodeN0w'
 
 ld.simple_bind_s(user, pw)
 
